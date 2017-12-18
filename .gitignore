@@ -47,3 +47,19 @@ build
 *.X
 tags
 *~
+.vscode/
+
+# Testing
+*_ut*
+*.out
+foo.conf
+test-suite.log
+test.ini
+bom2be
+bom2le
+bom3
+bom4be
+bom4le
+dhash_example*
+dhash_test*
+merge.validator.*
