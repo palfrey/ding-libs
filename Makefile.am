@@ -253,7 +253,7 @@ endif
 check_PROGRAMS += simplebuffer_ut
 TESTS += simplebuffer_ut
 simplebuffer_ut_SOURCES = basicobjects/simplebuffer_ut.c
-simplebuffer_ut_LDADD = libbasicobjects.la
+simplebuffer_ut_LDADD = -lintl libbasicobjects.la
 
 basicobjects-docs:
 if HAVE_DOXYGEN
@@ -305,7 +305,7 @@ libini_config_la_LIBADD = \
     libpath_utils.la \
     libref_array.la \
     libbasicobjects.la
-libini_config_la_LDFLAGS = \
+libini_config_la_LDFLAGS = -lintl \
     -version-info 7:1:2
 
 if HAVE_LD_VERSION_SCRIPT
@@ -361,7 +361,7 @@ TESTS += \
 
 
 ini_config_ut_SOURCES = ini/ini_config_ut.c
-ini_config_ut_LDADD = \
+ini_config_ut_LDADD = -lintl \
     libini_config.la \
     libcollection.la
 
@@ -372,10 +372,10 @@ ini_valueobj_ut_SOURCES = ini/ini_valueobj_ut.c
 ini_valueobj_ut_LDADD = libini_config.la libbasicobjects.la
 
 ini_parse_ut_SOURCES = ini/ini_parse_ut.c
-ini_parse_ut_LDADD = libini_config.la libcollection.la libbasicobjects.la
+ini_parse_ut_LDADD = -lintl libini_config.la libcollection.la libbasicobjects.la
 
 ini_augment_ut_SOURCES = ini/ini_augment_ut.c
-ini_augment_ut_LDADD = libini_config.la libcollection.la \
+ini_augment_ut_LDADD = -lintl libini_config.la libcollection.la \
                        libbasicobjects.la libpath_utils.la libref_array.la
 
 ini_configmod_ut_SOURCES = ini/ini_configmod_ut.c
@@ -406,7 +406,7 @@ ini_validators_ut_check_LDADD = libini_config.la $(CHECK_LIBS)
 
 
 ini_save_ut_SOURCES = ini/ini_save_ut.c
-ini_save_ut_LDADD = libini_config.la libcollection.la \
+ini_save_ut_LDADD = -lintl libini_config.la libcollection.la \
                          libbasicobjects.la libpath_utils.la libref_array.la
 
 ini_config-docs:
