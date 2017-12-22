@@ -63,3 +63,6 @@ bom4le
 dhash_example*
 dhash_test*
 merge.validator.*
+modtest.conf.*
+test_real*
+real.conf.manual
